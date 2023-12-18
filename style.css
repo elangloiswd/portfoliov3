@@ -1,0 +1,175 @@
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*style root*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&family=Roboto+Mono:ital,wght@0,300;0,400;1,600&display=swap');
+:root{
+--backgroundDark: #171618;
+--backgroundMed: #191A19;
+--BackgroundLight: #1C1D1C;
+--textRed: #fb3640;
+--textGray: #1D1D1D;
+--text: #EAEAEB;
+--body-fonts: 'Roboto Mono', monospace;
+--hero-fonts: 'Inter', sans-serif;
+}
+
+/*style typo*/
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-size: clamp(var(--min), var(--val), var(--max));
+}
+
+h1 {
+  --min: 3.5em; /* minimum value*/
+  --val: 5vw; /* preferred value = 5% viewport width*/
+  --max: 4.5em; /*maximum value*/
+}
+h2 {
+  --min: 2.5em;
+  --val: 5vw;
+  --max: 3.5em;
+}
+h3 {
+    --min: 2em; /* minimum value*/
+    --val: 5vw; /* preferred value = 5% viewport width*/
+    --max: 3em; /*maximum value*/
+  }
+h4 {
+    --min: 1.5em;
+    --val: 4vw;
+    --max: 2.25em;
+  }
+  h5 {
+    --min: 0.75em;
+    --val: 4vw;
+    --max: 1.25em;
+  }
+p {
+  --min: 1em;
+  --val: 2.5vw;
+  --max: 1.5em;
+}
+
+/*style*/
+body{
+    background-color: var(--backgroundDark);
+    color: var(--text);
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header img {
+    position: relative;
+    max-width: 100%;
+    min-width: 30%;
+    width: clamp(18rem, 60vw, 42rem);
+}
+
+#social{
+font-size:clamp(1.8rem, 2rem, 2.2rem);
+position: fixed;
+right: 1rem;
+top: 50%;
+transform: translate(0, -50%);
+display: flex;
+flex-direction: column;
+}
+#nav{
+font-size:clamp(1.5rem, 1.8rem, 2rem);
+position: fixed;
+left: 1rem;
+top: 50%;
+transform: translate(0, -50%);
+}
+
+.navcontainer li, i{
+    padding: 7%;
+}
+
+section{
+height: 100vh;
+}
+section .container{
+    padding-inline: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h6{
+color: #1d1d1d5c;
+font-family: Roboto Mono;
+font-size: 8rem;
+font-style: italic;
+font-weight: 700;
+margin-left: -1.2rem;
+}
+#about{
+line-height: 1.2;
+}
+
+#about span:first-of-type {
+    font-weight: 700;
+    text-decoration:line-through ;
+    text-decoration-color: red;
+}
+
+#about span:last-of-type {
+    font-weight: 700;
+    text-decoration:underline ;
+    text-decoration-color: green;
+    }
+#about h5{
+    max-width: 50%;
+justify-content: flex-start;
+padding-top: 1%;
+}
