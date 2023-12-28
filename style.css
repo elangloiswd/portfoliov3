@@ -267,12 +267,31 @@ padding-top: 1%;
 text-align: right;
 margin-left: auto;
 transition: transform 0.4s ease-out;
-
+padding-bottom: 5%;
 }
 #about h5:hover{
     transform: scale(1.02) rotate(0.2deg);
 }
+#about .description {
+max-width: 60%;
+padding: 3%;
+margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    line-height: 1.02;
+    background: var(--BackgroundLighter);
+    border: 1rem var(--BackgroundLighter3);
+    border-top: 0;
+    border-bottom: 0;
+    border-style:double;
+    gap: 0.6rem;
+}
 
+.description p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
 #about .skill i{
     font-size: 3rem;
 }
@@ -588,6 +607,11 @@ section .container, footer .container{
 .selfanimate{
     top: -125%;
 }
+
+#about .description {
+    max-width: 90%;
+    }
+
 .workcontainer {
         padding-bottom: 15%;
     }
@@ -642,7 +666,7 @@ padding: 1rem;
 
 
 
-@media (max-width: 834px) {
+@media (max-width: 835px) {
     header{
         height: 90vh;
       }
@@ -821,6 +845,10 @@ max-width: 15%;
 }
 #social{
     visibility: hidden;
+}
+
+#about .description{
+    max-width: 90%;
 }
 }
 
