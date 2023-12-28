@@ -278,24 +278,29 @@ padding-bottom: 5%;
 }
 #about .description {
 max-width: 60%;
-padding: 3%;
+padding: 4%;
 margin: 0 auto;
     display: flex;
     flex-direction: column;
     text-align: start;
     line-height: 1.02;
-    background: var(--BackgroundLighter);
-    border: 1rem var(--BackgroundLighter3);
-    border-top: 0;
-    border-bottom: 0;
-    border-style:double;
+    background: var(--backgroundMed);
+    border-right: 0.5rem solid var(--BackgroundLighter2);
+    border-left: 0.5rem solid var(--BackgroundLighter2);
     gap: 0.6rem;
 }
+
+#about .description:hover {
+    padding-inline: 4.5%;
+box-shadow: 0 8px 12px 1px #2726263f;
+transition: padding 800ms ease-in-out;
+    }
 
 .description p {
     font-weight: 300;
     font-size: 1.2rem;
 }
+
 #about .skill i{
     font-size: 3rem;
 }
@@ -861,7 +866,8 @@ max-width: 15%;
 }
 #about .description{
     max-width: 90%;
-    
+    border-right: 0;
+    border-left: 0; 
 }
 }
 
