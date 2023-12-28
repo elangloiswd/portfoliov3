@@ -74,9 +74,9 @@ p {
 }
 
 h1 {
-  --min: 3.5em; /* minimum value*/
-  --val: 5vw; /* preferred value = 5% viewport width*/
-  --max: 4.5em; /*maximum value*/
+  --min: 3.5em; 
+  --val: 5vw;
+  --max: 4.5em;
 }
 h2 {
   --min: 2.5em;
@@ -84,9 +84,9 @@ h2 {
   --max: 3.5em;
 }
 h3 {
-    --min: 2em; /* minimum value*/
-    --val: 5vw; /* preferred value = 5% viewport width*/
-    --max: 3em; /*maximum value*/
+    --min: 2em;
+    --val: 5vw;
+    --max: 3em;
   }
 h4 {
     --min: 1.5em;
@@ -506,7 +506,7 @@ footer{
 
   .skew4{
     transform: skewY(-6deg);
-    /* background-color:var(--BackgroundLight); */
+
     background: var(--backgroundMed);
   height: 2vh;
   bottom: 29%;
@@ -518,7 +518,6 @@ footer{
   }
   .skew5{
     transform: skewY(-6deg);
-    /* background-color:var(--BackgroundLight); */
     background: var(--backgroundMed);
   height: 5vh;
   bottom: 22%;
@@ -530,7 +529,6 @@ footer{
 
   .skew6{
     transform: skewY(-6deg);
-    /* background-color:var(--BackgroundLight); */
     background: var(--backgroundMed);
   height: 25vh;
   bottom: -5%;
@@ -538,17 +536,6 @@ footer{
   position: fixed;
   width: 100%;
   z-index: -2;
-  }
-  .skew7{
-    transform: skewY(11deg);
-    /* background-color:var(--BackgroundLight); */
-    background: var(--BackgroundLight);
-  height: 25vh;
-  bottom: 25%;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  z-index: -3;
   }
   .skewcontainer{
     position: absolute;
@@ -774,8 +761,8 @@ z-index: 1001;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-    overflow: hidden; /* Hide horizontal overflow */
+    transition: transform 1ms cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    overflow: hidden;
 
   }
 
@@ -784,6 +771,8 @@ z-index: 1001;
     font-size: 3rem;
   padding: 0;
   opacity: 0;
+  opacity: 0;
+visibility: hidden;
 }
 
 ul{
@@ -793,8 +782,8 @@ ul{
 #menu.closing {
     transform: translateX(-100%);
     visibility: hidden;
-    transition: transform 5s ease-out 1110ms;
-    animation: fadeOut 15s;
+    transition: transform 250ms ease-outs;
+    animation: fadeOut 5s;
 
   }
   #menu.open {
@@ -810,9 +799,12 @@ ul{
     display: flex;
     font-size: 3rem;
     justify-content: space-evenly;
+
 }
 #menu .social a{
-opacity: 0;}
+opacity: 0;
+visibility: hidden;
+}
 
 
 .skill{

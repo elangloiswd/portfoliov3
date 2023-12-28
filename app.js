@@ -14,17 +14,13 @@ checkbox.addEventListener('click', () => {
     const isOpen = checkbox.checked;
   
     if (isOpen) {
-      // When checked
       menu.classList.remove('closing');
       menu.classList.add('open');
     } else {
-      // When unchecked
       menu.classList.remove('open');
       menu.classList.add('closing');
     }
-  
-    // Toggle visibility and opacity for both #menu li and .social a
-    document.querySelectorAll('#menu li, .social a').forEach(element => {
+      document.querySelectorAll('#menu li, .social a').forEach(element => {
       if (isOpen) {
         element.style.visibility = 'visible';
         element.style.opacity = '1';
