@@ -856,8 +856,12 @@ max-width: 15%;
     visibility: hidden;
 }
 
+#about h5{
+    padding-bottom: 12%;
+}
 #about .description{
     max-width: 90%;
+    
 }
 }
 
