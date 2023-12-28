@@ -8,37 +8,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="navcontainer">
-    <div id="nav">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#">Blog</a></li>
-        </ul>
-    </div>
-    <div id="social">
-        <a href="https://www.linkedin.com/in/ericlanglois300188666/"><i class="fa-brands fa-linkedin"></i></a>       
-        <a href="https://github.com/elangloiswd"><i class="fa-brands fa-square-github"></i></a>
-        <a href="https://mastodon.social/@ericlanglois"><i class="fa-brands fa-mastodon"></i> </a>  
-    </div>
-    </div>
+
     <header>
+        <div class="navcontainer">
+    <nav>
+        <div id="menuToggle">
+        <input type="checkbox" id="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+            <ul id="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+                <div class="social">
+                <a href="https://www.linkedin.com/in/ericlanglois300188666/"><i class="fa-brands fa-linkedin"></i></a>       
+                <a href="https://github.com/elangloiswd"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://mastodon.social/@ericlanglois"><i class="fa-brands fa-mastodon"></i> </a>  
+            </div>
+            </ul>
+        </div>
+        </nav>
+        <div id="social">
+            <a href="https://www.linkedin.com/in/ericlanglois300188666/"><i class="fa-brands fa-linkedin"></i></a>       
+            <a href="https://github.com/elangloiswd"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://mastodon.social/@ericlanglois"><i class="fa-brands fa-mastodon"></i> </a>  
+        </div>
+        </div>
         <img src="resources/Hero.svg" alt="">
+        <img src="resources/selfanimate.png" alt="" class="selfanimate">
         <div class="skewcontainer">
-            <div class="skew1"></div>
-            <div class="skew2"></div>
-            <div class="skew3"></div>
             <div class="skew4"></div>
             <div class="skew5"></div>
+            <div class="skew6"></div>
         </div>
     </header>
     <main>
 <section id="about">
 
     <h6>ABOUT</h6>
+
     <div class="container">
+        <img src="resources/trowelanimate.png" alt="" class="trowelanimate">
+
         <div class="aboutcontainer">
+
     <h2>From <span>Bricklayer</span> to <span>Developer</span></h2>
     <h5>I’m meticulous and focused on user experience and performance.</h5>
     <div class="skill">
@@ -80,12 +95,14 @@
 </div>
 
 </div>
+
+
 </section>
 <section id="work">
     <h6>WORK</h6>
 <div class="container">
-
     <div class="workcontainer">
+
 
         <a href="https://elangloiswd.github.io/klingonPasswordGenerator/"><img src="resources/klingon.png" alt=""></a>
 
@@ -94,7 +111,7 @@
         <h3><span>/</span> <span>Klingon</span> password Generator</h3>
         <p>This is a password generator that use the Klingon dictionary.</p>
         <p>The goal was to generate a password only using full words, without truncating the words within the desired length including the numbers and symbols.</p>
-
+        <a href="https://elangloiswd.github.io/klingonPasswordGenerator/">Link</a>
     </div>
 
 </div>
@@ -108,7 +125,7 @@
             <h3><span>/</span> <span>Blog</span> Next.js</h3>
             <p>This is a Blog build with Next.js and sanity as headless cms with tailwind.</p>
             <p>The goal was to implement a headless cms to post blog articles and make it fast and adaptative.</p>
-
+            <a href="https://elangloiswd.github.io/klingonPasswordGenerator/">Link</a>
         </div>
 
     </div>
@@ -118,9 +135,22 @@
 <footer id="contact">
     <h6>CONTACT</h6>
 <div class="container">
-
+<div class="formcontainer">
+    <p>If you want to reach me, send me a message and I'll get back as soon as possible.</p>
+    <form
+    action="https://formspree.io/f/mnqearjj"
+    method="POST"
+  >
+    <input name="name" placeholder="Name">
+      <input type="email" name="email" placeholder="Email">
+      <textarea name="message" placeholder="Message"></textarea>
+    <!-- your other form fields go here -->
+    <button type="submit">Send</button>
+  </form>
+</div>
 </div>
 </footer>
     </main>
+<script src="app.js"></script>
 </body>
 </html>
