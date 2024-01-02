@@ -685,19 +685,20 @@ padding: 1rem;
 
 
 
-@media (max-width: 835px) {
+@media (max-width: 845px) {
     header{
         height: 90vh;
+
       }
     
-    header img {
+    header img:first-of-type {
         position:absolute;  
         z-index: 3;
         justify-self: center;
         align-self: center;
         max-width: 100%;
         min-width: 30%;
-        width: clamp(18rem, 60vw, 42rem);
+        width: clamp(22rem, 70vw, 55rem);
     }
 
 section{
@@ -897,14 +898,3 @@ max-width: 15%;
     .nav-toggle-label {
         display: none;
 }}
-
-@media (prefers-reduced-motion: no-preference)
-{
-    p{
-        opacity: 0;
-        scale: 0.8;
-        animation: fade-In linear forwards;
-        animation-timeline: view(20px);
-        animation-range: entry 200px;
-    }
-}
