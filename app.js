@@ -1,32 +1,4 @@
-const link = document.querySelectorAll('#menu li');
-const checkbox = document.getElementById('checkbox');
-const menu = document.getElementById('menu');
-const social = document.querySelectorAll('.social a')
-link.forEach(l => {
-    l.addEventListener('click', () => {
-        checkbox.checked = false;
-        menu.classList.remove('open');
-        menu.classList.add('closing');
-})
-})
-
-checkbox.addEventListener('click', () => {
-    const isOpen = checkbox.checked;
-  
-    if (isOpen) {
-      menu.classList.remove('closing');
-      menu.classList.add('open');
-    } else {
-      menu.classList.remove('open');
-      menu.classList.add('closing');
-    }
-      document.querySelectorAll('#menu li, .social a').forEach(element => {
-      if (isOpen) {
-        element.style.visibility = 'visible';
-        element.style.opacity = '1';
-      } else {
-        element.style.visibility = 'hidden';
-        element.style.opacity = '0';
-      }
-    });
-  });
+const link=document.querySelectorAll('#menu li');const checkbox=document.getElementById('checkbox');const menu=document.getElementById('menu');const social=document.querySelectorAll('.social a')
+link.forEach(l=>{l.addEventListener('click',()=>{checkbox.checked=!1;menu.classList.remove('open');menu.classList.add('closing')})})
+checkbox.addEventListener('click',()=>{const isOpen=checkbox.checked;if(isOpen){menu.classList.remove('closing');menu.classList.add('open')}else{menu.classList.remove('open');menu.classList.add('closing')}
+document.querySelectorAll('#menu li, .social a').forEach(element=>{if(isOpen){element.style.visibility='visible';element.style.opacity='1'}else{element.style.visibility='hidden';element.style.opacity='0'}})});const animations=document.querySelectorAll('.animation');window.addEventListener('scroll',checkAnimations);checkAnimations();function checkAnimations(){animations.forEach((animation)=>{const animationTop=animation.getBoundingClientRect().top;const triggerBottom=window.innerHeight/1.1;if(animationTop<=triggerBottom){if(!animation.classList.contains('show')){animation.classList.add('show')}}else{if(animation.classList.contains('show')){animation.classList.remove('show')}}})}
