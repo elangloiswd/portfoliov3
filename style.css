@@ -589,10 +589,15 @@ overflow: hidden;
     50% {background-position: right}
     100% {background-position: left}
 }
+
+@keyframes fade-In {
+to { opacity: 1; scale: 1;}
+  }
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }
@@ -892,3 +897,14 @@ max-width: 15%;
     .nav-toggle-label {
         display: none;
 }}
+
+@media (prefers-reduced-motion: no-preference)
+{
+    p{
+        opacity: 0;
+        scale: 0.8;
+        animation: fade-In linear forwards;
+        animation-timeline: view(20px);
+        animation-range: entry 200px;
+    }
+}
